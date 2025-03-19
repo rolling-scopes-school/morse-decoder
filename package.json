@@ -1,31 +1,26 @@
 {
   "name": "morse-decoder",
   "version": "1.0.0",
-  "description": "Morse code decoder",
-  "main": "test.js",
+  "description": "Morse Decoder",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha test.js",
-    "postinstall": "node postinstall.js"
-  },
-  "engines": {
-    "node": "<=14"
+    "test": "npm run lint && mocha",
+    "lint": "node node_modules/eslint/bin/eslint.js ./src",
+    "lint:fix": "node node_modules/eslint/bin/eslint.js ./src --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/romacher/morse-decoder.git"
+    "url": "git+https://github.com/rolling-scopes-school/morse-decoder.git"
   },
-  "author": "Roman Chernyavski",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/romacher/morse-decoder/issues"
-  },
-  "homepage": "https://github.com/romacher/morse-decoder#readme",
+  "author": "max@shas.tel",
+  "license": "MIT",
+  "homepage": "https://github.com/rolling-scopes-school/morse-decoder",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.0"
-  },
-  "dependencies": {
-    "colors": "^1.4.0",
-    "semver": "^6.3.0"
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "mocha": "^10.8.2",
+    "prettier": "^3.5.3"
   }
 }
